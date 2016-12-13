@@ -15,5 +15,22 @@
   "bugs": {
     "url": "https://github.com/bsaphier/do-good-hackathon/issues"
   },
-  "homepage": "https://github.com/bsaphier/do-good-hackathon#readme"
+  "homepage": "https://github.com/bsaphier/do-good-hackathon#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "redux-thunk": "^2.1.0",
+    "webpack": "^1.14.0"
+  }
 }
