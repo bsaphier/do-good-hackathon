@@ -3,7 +3,7 @@
  const webpack = require('webpack');
 
 module.exports = {
-  entry: './browser/react/index.js',
+  entry: './app/index.js',
   output: {
     path: __dirname,
     filename: './public/bundle.js'
@@ -12,6 +12,7 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /jsx?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
