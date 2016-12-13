@@ -1,4 +1,4 @@
-import axios from 'axious';
+import axios from 'axios';
 
 export const GET_ALL_POSTS = 'GET_ALL_POSTS';
 export const CREATE_NEW_POST = 'CREATE_NEW_POST';
@@ -22,7 +22,7 @@ export const selectedPost = post => ({
 
 export const getPosts = () => {
   return dispatch => {
-    axios.get('/api/posts')
+    axios.get('/posts')
       .then(response => {
         dispatch(getAllPosts(response.data))
       })
@@ -31,7 +31,7 @@ export const getPosts = () => {
 
 export const createPost = () => {
   return dispatch => {
-    axios.post('/api/posts')
+    axios.post('/posts')
       .then(response => {
         dispatch(createNewPost(response.data))
       })
@@ -40,7 +40,7 @@ export const createPost = () => {
 
 export const getPostsById = postId => {
   return dispatch => {
-    axios.get(`/api/posts/${postId}`)
+    axios.get(`/posts/${postId}`)
       .then(response => {
         dispatch(selectedPost(response.data));
       });

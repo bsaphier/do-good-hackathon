@@ -7,7 +7,7 @@ export default class Post extends Component {
 	
 
   render() {
-	const onePost = props.posts;
+	const onePost = this.props.post;
 			
 
       return (

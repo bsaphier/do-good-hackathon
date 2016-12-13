@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
+import PostList from '../components/PostList'; 
 import Navbar from '../components/Navbar';
 
 export default class AppContainer extends Component {
   constructor (props) {
     super(props);
-    this.state = {};
+    this.state = Object.assign;
   }
 
   render () {
@@ -15,9 +15,7 @@ export default class AppContainer extends Component {
           <Navbar />
         </div>
         <div className="col-xs-10">
-          {
-            props.children && React.cloneElement(props.children, props)
-          }
+          <PostList allPosts={this.props}/>
         </div>
       </div>
     );

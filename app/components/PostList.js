@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 
 class PostList extends Component {
   render() {
-    const { posts } = this.props;
+    const { allPosts } = this.state;
 
     return (
       <div>
         <h2>Posts</h2>
         <div className="post-list">
           {
-            posts.map(post => (
+            allPosts.map(post => (
               <div key={post.id} className="list-group-item">
                 <PostComponent post={post} />
               </div>

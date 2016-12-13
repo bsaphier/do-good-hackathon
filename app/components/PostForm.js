@@ -10,14 +10,14 @@ export default class PostForm extends React.Component {
       date: '',
       location: '',
       scamDescrip: '',
-      tags: '',
+      //tag: '',
       message: '',
     };
   }
 
   render () {
 
-    const convertTags = tags => tags.split(', ');
+    //const convertTags = tags => tags.split(', ');
 
     return (
       <div>
@@ -76,7 +76,8 @@ export default class PostForm extends React.Component {
               })
             }} />
         </div>
-        <div>
+        { /*
+          <div>
           <span>Tags (e.g. Broadway, Hair, Lunchtime):</span>
           <input
             type='text'
@@ -86,7 +87,8 @@ export default class PostForm extends React.Component {
                 tags: evt.target.value
               })
             }} />
-        </div>
+        </div> 
+      */}
         <div>
           <button onClick={evt => {
             axios
@@ -96,7 +98,9 @@ export default class PostForm extends React.Component {
               date: this.state.date,
               location: this.state.location,
               scamDescrip: this.state.scamDescrip,
-              tags: convertTags(this.state.tags)
+             { 
+               //tags: convertTags(this.state.tags) 
+              }
             })
             .then(() => {
               this.setState({
@@ -105,7 +109,9 @@ export default class PostForm extends React.Component {
                 date: '',
                 location: '',
                 scamDescrip: '',
-                tags: '',
+                {
+                  //tags: '',
+                }
                 message: `${this.state.title} has been posted!`,
               });
               setTimeout(() => {
