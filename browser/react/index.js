@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router';
+
+//import store from './store';
+
+import AddPostContainer from './containers/AddPostContainer';
 import AppContainer from './containers/AppContainer';
 
 ReactDOM.render(
-  <AppContainer />,
+  <Router history={hashHistory}>
+    <Route path="/" component={AppContainer}>
+      <Route path="/post-form" component={AddPostContainer}/>
+    </Route>
+  </Router>,
   document.getElementById('app')
 );
