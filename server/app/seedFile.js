@@ -50,7 +50,7 @@ var posts = [
         location: "Central Park",
         date: Date.UTC(2016, 8, 21, 14, 30),
         title: "No More Thin Mints!!!",
-        scam: "I was a boy scout when I was younger and I saw some little girls selling girl scout cookies in Central Park. Why not support a good fundraiser? Anyway, I bought two boxes of my favorite cookies, Thin Mints and took the train home (didn't want the chocolate to melt. Well, the good news is the chocolate did not melt. The bad news is there was only half a pack of cookies. Bummer!",
+        scam: "I was a boy scout when I was younger and I saw some little girls selling girl scout cookies in Central Park. Why not support a good fundraiser? Anyway, I bought two boxes of my favorite cookies, Thin Mints, and took the train home (didn't want the chocolate to melt). Well, the good news is the chocolate did not melt. The bad news is there was only half a pack of cookies. Bummer!",
         description: "Some little girls"
 
     },
@@ -171,7 +171,6 @@ var tags = [
     {
     tag: "BK"
     }
-
 ]
 
 
