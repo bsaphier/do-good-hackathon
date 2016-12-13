@@ -1,5 +1,5 @@
-const Post = require('./model')
-const Tag = require('./model')
+const Post = require('./Post')
+const Tag = require('./Tag')
 
 Post.belongsToMany(Tag, {through: 'PostTag'});
 Tag.belongsToMany(Post, {through: 'PostTag'});
@@ -10,3 +10,8 @@ Post.addScope('defaultScope', {
 }, {
   override: true
 })
+
+module.exports = {
+    Post,
+    Tag
+}
