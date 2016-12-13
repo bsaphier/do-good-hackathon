@@ -1,5 +1,5 @@
-import Sequelize from 'sequelize';
-import db from '../../db';
+const Sequelize = require ('sequelize');
+const db = require ('../../db');
 
 const Post = db.define('post', {
   title: {
@@ -13,9 +13,6 @@ const Post = db.define('post', {
   date: {
     type: Sequelize.DATE
   },
-  time: {
-    type: Sequelize.TIME
-  },
   location: {
     type: Sequelize.TEXT //not sure if we want to be more rigid?
   },
@@ -25,4 +22,4 @@ const Post = db.define('post', {
   }
 })
 
-export default Post;
+module.exports = Post;
