@@ -15,12 +15,13 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.use('/api', require('./routes'));
 
 var validFrontendRoutes = ['/', '/posts'];
-var indexPath = '/Users/hannahcain/Desktop/do-good-hackathon/browser/index.html';
+var indexPath = '/browser/index.html';
+//may have to change ^this^ path
 validFrontendRoutes.forEach(function (stateRoute) {
   app.get(stateRoute, function (req, res) {
     res.sendFile(indexPath);
   });
-})
+});
 
 
 // ***** Catch any request not handled in routes ***** //
@@ -33,7 +34,7 @@ app.use(function (req, res, next) {
 // ***** Error handling ***** //
 app.use(function (err, req, res, next) {
   console.error(err, err.stack);
-  let stat = (err.status || 500)
+  let stat = (err.status || 500);
   res.status(stat);
   res.json({
     error: err
