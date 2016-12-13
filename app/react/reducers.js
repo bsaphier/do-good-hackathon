@@ -1,9 +1,10 @@
-import { GET_ALL_POSTS, CREATE_NEW_POST, SELECTED_POST } from './actions';
+import { GET_ALL_POSTS, CREATE_NEW_POST, SELECTED_POST, CHANGE_SEARCH_TEXT } from './actions';
 
 const initialState = {
   allPosts: [],
   selectedPost: {},
-  createdPost: {}
+  createdPost: {},
+  search: ''
 }
 
 export default function (state = initialState, action){
@@ -22,6 +23,10 @@ export default function (state = initialState, action){
 
     case CREATE_NEW_POST:
       newState.createdPost = action.createdPost;
+      break;
+
+    case CHANGE_SEARCH_TEXT:
+      newState.search = action.search;
       break;
 
     default:

@@ -3,6 +3,7 @@ import axios from 'axious';
 export const GET_ALL_POSTS = 'GET_ALL_POSTS';
 export const CREATE_NEW_POST = 'CREATE_NEW_POST';
 export const SELECTED_POST = 'SELECTED_POST';
+export const CHANGE_SEARCH_TEXT = 'CHANGE_SEARCH_TEXT';
 
 
 export const getAllPosts = posts => ({
@@ -19,6 +20,11 @@ export const selectedPost = post => ({
     type: SELECTED_POST,
     currentPost: post
 });
+
+export const changeSearchText = search => ({
+  type: CHANGE_SEARCH_TEXT,
+  search: search
+})
 
 export const getPosts = () => {
   return dispatch => {
