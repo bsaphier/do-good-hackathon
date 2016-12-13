@@ -1,11 +1,7 @@
 const db = require('../db');
-const seeds = require('./seeds');
+const posts = require('./seedFile').posts;
+const tags = require('./seedFile').tags;
 // const Promise = require('bluebird');
-
-const posts = seeds.posts,
-  tags = seeds.tags;
-
-
 
 // seed functions
 

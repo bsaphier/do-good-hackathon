@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import db from './_db';
+import db from '../../db';
 
 const Post = db.define('post', {
   title: {
